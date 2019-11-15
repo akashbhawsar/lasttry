@@ -1,0 +1,31 @@
+
+<button (click)="Register()" type="button" class="btn btn-primary">Add Vehicle</button>
+
+<div class="table-responsive">
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>No</th>
+                <th>Name</th>
+                <th>Company</th>
+                <th>Type</th>
+                <th>Price</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let v of vehicle">
+                <td>{{v.v_no}}</td>
+                <td>{{v.v_name}}</td>
+                <td>{{v.company}}</td>
+                <td>{{v.type}}</td>
+                <td>{{v.price}}</td>
+                <td>{{v.description}}</td>
+                <td>
+                <button (click)="delete(v.v_no)"type="button" class="btn btn-primary">Delete</button>
+                </td>
+                
+            </tr>
+        </tbody>
+    </table>
+  
